@@ -1,3 +1,16 @@
+## 简易webpack
+### 实现的功能
+- 可以将ES6语法转换成ES5语法
+  - 通过`babylon`生成AST
+  - 通过`bable-core`将AST重新生成源码
+
+- 可以分析模块之间的依赖关系
+  - 通过`babel-traverse`的`ImportDeclaration`方法获取依赖属性
+- 生成的JS文件可以在浏览器中运行
+
+
+<br>
+
 ## 自定义 loader
 
 https://webpack.js.org/contribute/writing-a-loader/
@@ -15,7 +28,7 @@ https://webpack.js.org/contribute/writing-a-loader/
 - 获取参数调用`this.query`
 - 异步方法调用`this.async()`结合`callback`
 
-## 使用方式：
+### 使用方式：
 
 - 方法一：绝对路径
 
@@ -75,3 +88,4 @@ https://webpack.js.org/contribute/writing-a-plugin/
 `npm install`
 
 `npm run build`
+
